@@ -1,8 +1,12 @@
-var koa = require('koa');
-var app = koa();
+const koa = require('koa');
+const router = require('koa-route');
+const cors = require('koa-cors');
+const app = koa();
 
-app.use(function *(){
-	this.body = 'Hello from koajs';
-});
+const todoRoutes = require('./routes/todolists');
+
+app.use(cors());
+
+app.use(router.get('/todos', todoRoutes.get));
 
 app.listen(3000);
