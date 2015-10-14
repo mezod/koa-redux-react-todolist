@@ -1,10 +1,9 @@
 import React from 'react';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './containers/App';
-import todoApp from './reducers/reducers';
+import store from './stores/stores';
 
-let store = createStore(todoApp);
+//let store = createStore(todoApp);
 
 React.render(
   // The child must be wrapped in a function

@@ -36,7 +36,7 @@ export function setVisibilityFilter(filter) {
 }
 
 export function receiveTodos(todos) {
-  return { type: RECEIVE_TODOS, todos}
+  return { type: RECEIVE_TODOS, todos};
 }
 
 export function fetchTodos() {

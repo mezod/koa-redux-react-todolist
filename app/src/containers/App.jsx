@@ -6,9 +6,9 @@ import TodoList from '../components/TodoList';
 import Footer from '../components/Footer';
 
 class App extends Component {
-  componentWillMount() {
-    this.props.dispatch(fetchTodos());
-  }
+  // componentWillMount() {
+  //   this.props.dispatch(fetchTodos());
+  // }
 
   render() {
     // Injected by connect() call:

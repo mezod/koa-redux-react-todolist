@@ -1,19 +1,21 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import todo from '../reducers';
+import todoApp from '../reducers/reducers';
+import { fetchTodos } from '../actions/actions';
 
 const storeWithMiddleware = applyMiddleware (
 	thunkMiddleware
 )(createStore);
-const store = storeWithMiddleware(todo);
+const store = storeWithMiddleware(todoApp);
 
 if (module.hot) {
   // Enable Webpack hot module replacement for reducers
-  module.hot.accept('../reducers', () => {
+  module.hot.accept('../reducers/reducers', () => {
     const nextRootReducer = require('../reducers/reducers');
     store.replaceReducer(nextRootReducer);
   });
 }
 
+//store.dispatch(fetchTodos());
 
 export default store;

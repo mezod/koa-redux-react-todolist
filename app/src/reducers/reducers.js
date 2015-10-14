@@ -28,7 +28,6 @@ function todos(state = [], action) {
     ];
   case RECEIVE_TODOS:
     return action.todos;
-    break;
   default:
     return state;
   }
