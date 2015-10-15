@@ -12,7 +12,6 @@ module.exports = {
   		this.response.body = { success: false, message: 'title required' };
   		return;
   	}
-  	//var todo = { text: text, complete: false };
   	var todo = yield todolist.add(text)
   	this.response.body = todo;
   }
