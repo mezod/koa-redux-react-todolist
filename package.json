@@ -4,7 +4,7 @@
   "description": "A todolist with Koa, Redux, React, Webpack, Mocha and SASS",
   "main": "index.js",
   "scripts": {
-    "webserver": "node api/src/server.js",
+    "webserver": "nodemon api/src/server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jsx)'",
     "test:watch": "npm run test -- --watch",
     "build": "node_modules/.bin/webpack",
@@ -42,6 +42,7 @@
     "isomorphic-fetch": "^2.1.1",
     "knex": "^0.8.6",
     "koa": "^1.0.0",
+    "koa-bodyparser": "^2.0.1",
     "koa-cors": "0.0.16",
     "koa-route": "^2.4.2",
     "mysql": "^2.9.0",
@@ -69,4 +70,3 @@
     "webpack-dev-server": "^1.11.0"
   }
 }
-
