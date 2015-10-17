@@ -12,7 +12,17 @@ module.exports = {
   		this.response.body = { success: false, message: 'title required' };
   		return;
   	}
-  	var todo = yield todolist.add(text)
+  	const todo = yield todolist.add(text)
   	this.response.body = todo;
+  },
+
+  * put(id) {
+  	const task = this.request.body;
+  	const todo = yield todolist.update(id, task);
+  	this.response.body = todo;
+  },
+
+  * del(id) {
+  	this.response.body = yield todolist.del(id);
   }
 };

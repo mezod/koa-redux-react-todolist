@@ -10,6 +10,7 @@ export default class Todo extends Component {
           cursor: this.props.completed ? 'default' : 'pointer'
         }}>
         {this.props.text}
+        <a onClick={this.props.onClickDelete}>[X]</a>
       </li>
     );
   }
@@ -18,5 +19,5 @@ export default class Todo extends Component {
 Todo.propTypes = {
   onClick: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired
+  completed: PropTypes.number.isRequired
 };
